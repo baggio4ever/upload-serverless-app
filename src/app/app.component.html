@@ -7,12 +7,12 @@
 </div>
 
 <div class="form-group">
-  <label for="file">Choose File</label>
+  <label for="file">JPGファイルを選んでください</label>
   <input type="file"
           id="file"
           (change)="handleFileInput($event.target.files)">
+  <button mat-fab color="primary" (click)="uploadFileToActivity()">送信！</button>
 </div>
-<button (click)="uploadFileToActivity()">いざ</button>
 
 <!--
 <h2>Here are some links to help you start: </h2>
