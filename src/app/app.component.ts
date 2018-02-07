@@ -61,6 +61,14 @@ export class AppComponent implements AfterViewInit, DoCheck {
     this.fileToUpload = files.item(0);
   }
 
+  getFilenameToUpload(): string {
+    if( this.fileToUpload ){
+      return this.fileToUpload.name;
+    } else {
+      return '';
+    }
+  }
+
   uploadFileToActivity() {
     console.log('さあ、送信！');
     this.fileUploadService.postFile(this.fileToUpload);

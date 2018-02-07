@@ -7,10 +7,15 @@
 </div>
 
 <div class="form-group">
-  <label for="file">JPGファイルを選んでください</label>
+  <label for="file">JPGファイルを選んでください</label><br/>
   <input type="file"
           id="file"
-          (change)="handleFileInput($event.target.files)">
+          (change)="handleFileInput($event.target.files)"
+          hidden="true"
+          id="input-image-file"
+          accept="image/jpeg" />
+  {{getFilenameToUpload()}}
+  <label for="input-image-file" class="mat-raised-button mat-primary">選んでね</label> <!-- ありがとう https://qiita.com/TsuyoshiUshio@github/items/70b9dbb1d0362ba4f478 -->
   <button mat-fab color="primary" (click)="uploadFileToActivity()">送信！</button>
 </div>
 

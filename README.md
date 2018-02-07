@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [HTMLフォームからAPIGatewayを使ってAWS LambdaにPOSTする](https://qiita.com/satetsu888/items/40fc387735192b794da8)
 
 #### Canvas
-[さまざまな図形を描く](http://www.html5.jp/canvas/how2.html)
+[Canvasとは](http://www.html5.jp/canvas/what.html)
 
 [Angular 4でcanvas要素を扱う方法](https://qiita.com/clockmaker/items/c9dfe8985d35208a9cb1) まるパクリから始めさせて頂きました。
 
@@ -60,3 +60,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [AWSにおける静的コンテンツ配信パターンカタログ（アンチパターン含む）](https://dev.classmethod.jp/cloud/aws/static-contents-delivery-patterns/)
 
+[コンポーネント間のデータ授受メモ](https://qiita.com/gambare/items/b75f9c9dc997ae45c092)
