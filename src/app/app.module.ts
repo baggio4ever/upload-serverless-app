@@ -1,6 +1,7 @@
 import { FileUploadService } from './file-upload.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -16,8 +17,9 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule
   ],
   providers: [ FileUploadService ],

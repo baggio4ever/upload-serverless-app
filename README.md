@@ -28,6 +28,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## 気になる・参考になる
+
+#### ファイルアップロード
 [Angular-5 File Upload](https://stackoverflow.com/questions/47936183/angular-5-file-upload)
   ほぼこれ見てる
-  
+
+[API Gateway + Lambda にFormからPOSTする時のマッピングテンプレートを作成しました](https://dev.classmethod.jp/cloud/aws/sugano-013-api-gateway/)
+
+[HTMLフォームからAPIGatewayを使ってAWS LambdaにPOSTする](https://qiita.com/satetsu888/items/40fc387735192b794da8)
+
+#### Canvas
+[さまざまな図形を描く](http://www.html5.jp/canvas/how2.html)
+
+[Angular 4でcanvas要素を扱う方法](https://qiita.com/clockmaker/items/c9dfe8985d35208a9cb1) まるパクリから始めさせて頂きました。
+
+#### Swagger
+[SwaggerでRESTful APIの管理を楽にする](https://qiita.com/disc99/items/37228f5d687ad2969aa2)
