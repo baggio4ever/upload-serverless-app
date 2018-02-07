@@ -44,3 +44,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 #### Swagger
 [SwaggerでRESTful APIの管理を楽にする](https://qiita.com/disc99/items/37228f5d687ad2969aa2)
+
+#### その他
+[Serverless+SPAで超低費用な個人サービス構築のススメ](https://qiita.com/teradonburi/items/aa31fa91d618dd6955a1)
+
+[CloudFormation であら便利に静的サイトを作る](https://qiita.com/y13i/items/643f7dfd989c6df81d2e)
+

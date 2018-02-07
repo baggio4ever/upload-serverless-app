@@ -35,11 +35,15 @@ export class AppComponent implements AfterViewInit, DoCheck {
   }
 
   draw() {
+    const CANVAS_WIDTH = 400;
+    const CANVAS_HEIGHT = 400;
+
     const ctx = this.context;
     if( ctx ) {
-      ctx.clearRect(0,0,400,400);
+      ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
       ctx.fillStyle = this.rectColor;
-      ctx.fillRect( 0,0,this.rectW,this.rectH );
+//      ctx.fillRect( 0, 0, this.rectW, this.rectH );
+      ctx.fillRect( (CANVAS_WIDTH - this.rectW) / 2, (CANVAS_HEIGHT - this.rectH) / 2, this.rectW, this.rectH ); // センター基準
     }
   }
 
@@ -48,7 +52,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
   }
 
   uploadFileToActivity() {
-    console.log('さあ、送信！')
+    console.log('さあ、送信！');
     this.fileUploadService.postFile(this.fileToUpload);
   }
 }
