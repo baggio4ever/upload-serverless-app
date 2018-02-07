@@ -44,6 +44,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [Angular 4でcanvas要素を扱う方法](https://qiita.com/clockmaker/items/c9dfe8985d35208a9cb1) まるパクリから始めさせて頂きました。
 
+[HTML5 Canvas 入門](https://qiita.com/kyrieleison/items/a3ebf7c55295c3e7d8f0)
+
+[Canvasイベント操作まとめ](https://qiita.com/nekoneko-wanwan/items/9af7fb34d0fb7f9fc870)
+
+[Canvasアニメーションの要点](https://qiita.com/nekoneko-wanwan/items/33afa5d20264c83b2bd1)
+
+[CanvasRenderingContext2D](https://developer.mozilla.org/ja/docs/Web/API/CanvasRenderingContext2D)
+
+[canvas チュートリアル](https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Canvas_tutorial)
+
+
 #### Swagger
 [SwaggerでRESTful APIの管理を楽にする](https://qiita.com/disc99/items/37228f5d687ad2969aa2)
 

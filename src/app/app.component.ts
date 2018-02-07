@@ -73,4 +73,24 @@ export class AppComponent implements AfterViewInit, DoCheck {
     console.log('さあ、送信！');
     this.fileUploadService.postFile(this.fileToUpload);
   }
+
+  canvasClick(e) {
+    console.log('click at '+ (e.clientX - this.myCanvas.nativeElement.offsetLeft) + ','+ (e.clientY - this.myCanvas.nativeElement.offsetTop));
+  }
+
+  canvasMouseUp() {
+    console.log('mouseUp');
+  }
+
+  canvasMouseDown() {
+    console.log('mouseDown');
+  }
+
+  canvasMouseOver() {
+    console.log('mouseOver');
+  }
+
+  canvasMouseOut() {
+    console.log('mouseOut');
+  }
 }
