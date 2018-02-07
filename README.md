@@ -37,6 +37,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [HTMLフォームからAPIGatewayを使ってAWS LambdaにPOSTする](https://qiita.com/satetsu888/items/40fc387735192b794da8)
 
+[CloudFront と S3 で 配信した Angular 製 SPA から API Gateway を通してファイルアップロードする](https://dev.classmethod.jp/server-side/serverless/spa-s3-fileupload-api-gateway/) これから読もう
+
 #### Canvas
 [Canvasとは](http://www.html5.jp/canvas/what.html)
 
