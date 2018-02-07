@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     FormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSliderModule
   ],
   providers: [ FileUploadService ],
   bootstrap: [AppComponent]

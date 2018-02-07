@@ -47,6 +47,16 @@ export class AppComponent implements AfterViewInit, DoCheck {
     }
   }
 
+  moveW(v): void {
+//    console.log('move: '+v);
+    this.rectW = v;
+  }
+
+  moveH(v): void {
+//    console.log('move: '+v);
+    this.rectH = v;
+  }
+
   handleFileInput(files: FileList): void {
     this.fileToUpload = files.item(0);
   }

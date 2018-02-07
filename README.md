@@ -50,3 +50,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [CloudFormation であら便利に静的サイトを作る](https://qiita.com/y13i/items/643f7dfd989c6df81d2e)
 
+[Amazon Route 53でドメインを購入する](https://dev.classmethod.jp/cloud/register-domains-route53/)
+
+[サーバーレスアーキテクチャで画像処理！　Serverless FrameworkとWandで簡単構築！](http://blog.serverworks.co.jp/tech/2016/10/19/serverless_framework/) python で画像処理
+
+[Serverless AWS構成でセキュアなSPAを目指す](https://www.slideshare.net/masayuki-kato/serverless-awsspa) いろいろ書いてある。難しくて理解できず。
+
+[CloudFrontでS3のウェブサイトをSSL化する](https://qiita.com/jasbulilit/items/73d70a01a5d3b520450f)
+
+[AWSにおける静的コンテンツ配信パターンカタログ（アンチパターン含む）](https://dev.classmethod.jp/cloud/aws/static-contents-delivery-patterns/)
+
