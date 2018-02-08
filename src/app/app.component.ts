@@ -105,4 +105,20 @@ export class AppComponent implements AfterViewInit, DoCheck {
   canvasMouseOut() {
     console.log('mouseOut');
   }
+
+  canvasMouseMove() {
+//    console.log('mouseMove');
+  }
+
+  canvasKeyDown( e ) {
+    console.log('keyDown:' + e.keyCode );
+  }
+
+  canvasKeyPress( e ) {
+    console.log('keyPress:' + e.charCode );
+  }
+
+  canvasKeyUp( e ) {
+    console.log('keyUp');
+  }
 }
