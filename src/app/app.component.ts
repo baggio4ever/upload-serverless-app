@@ -15,13 +15,20 @@ export class AppComponent implements AfterViewInit, DoCheck {
   rectColor = '#FF0000';
 
   context: CanvasRenderingContext2D;
+  animContext: CanvasRenderingContext2D;
 
   @ViewChild('myCanvas') myCanvas;
+  @ViewChild('animCanvas') animCanvas;
 
   fileToUpload: File = null;
 
   x = 0;
   y = 0;
+
+  animCanvasWidth = 0;
+  animCanvasHeight = 0;
+
+  animX = 0;
 
   constructor( private fileUploadService: FileUploadService ) {
   }
@@ -31,6 +38,13 @@ export class AppComponent implements AfterViewInit, DoCheck {
     this.context = canvas.getContext('2d');
 
     this.draw();
+
+    const animCanvas = this.animCanvas.nativeElement;
+    this.animContext = animCanvas.getContext('2d');
+    this.animCanvasWidth = animCanvas.width;
+    this.animCanvasHeight = animCanvas.height;
+
+    this.startAnim();
   }
 
   ngDoCheck() {
@@ -120,5 +134,22 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
   canvasKeyUp( e ) {
     console.log('keyUp');
+  }
+
+  startAnim(): void {
+    setInterval(() => {
+      this.animContext.clearRect(0,0,this.animCanvasWidth,this.animCanvasHeight);
+
+      this.animContext.beginPath();
+      this.animContext.strokeRect(this.animX,0,10,10);
+      if( this.animX > this.animCanvasWidth) {
+        this.animX = 0;
+      } else {
+        this.animX += 1;
+      }
+    }, 100);
+  }
+
+  render(): void {
   }
 }
