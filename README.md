@@ -58,6 +58,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 #### Swagger
 [SwaggerでRESTful APIの管理を楽にする](https://qiita.com/disc99/items/37228f5d687ad2969aa2)
 
+#### 多要素認証 （いつかは）
+
+[やはりお前らの多要素認証は間違っている](https://dev.classmethod.jp/etc/multi-factor-authentication/)
+
+[【レポート】サーバーレスにおける認証と認可: サーバーレスアプリケーションのためのID管理 #reinvent #SRV403](https://dev.classmethod.jp/cloud/aws/aws-reinvent-2017-srv403/)
+
+[ブラウザでMFA認証](https://qiita.com/yiida-tempus/items/77293c3c127623ee3918)
+
+[多要素認証を使った運用でもっと安全に](http://blog.serverworks.co.jp/tech/2017/02/08/mfa/)
+
+
 #### その他
 [Serverless+SPAで超低費用な個人サービス構築のススメ](https://qiita.com/teradonburi/items/aa31fa91d618dd6955a1)
 
