@@ -20,6 +20,9 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
   fileToUpload: File = null;
 
+  x = 0;
+  y = 0;
+
   constructor( private fileUploadService: FileUploadService ) {
   }
 
@@ -39,11 +42,15 @@ export class AppComponent implements AfterViewInit, DoCheck {
     const CANVAS_HEIGHT = 400;
 
     const ctx = this.context;
-    if( ctx ) {
+    if ( ctx ) {
       ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
       ctx.fillStyle = this.rectColor;
 //      ctx.fillRect( 0, 0, this.rectW, this.rectH );
       ctx.fillRect( (CANVAS_WIDTH - this.rectW) / 2, (CANVAS_HEIGHT - this.rectH) / 2, this.rectW, this.rectH ); // センター基準
+
+      const W = 10;
+      const H = 10;
+      ctx.fillRect(this.x - W / 2, this.y - H / 2, W, H);
     }
   }
 
@@ -65,7 +72,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
     if( this.fileToUpload ){
       return this.fileToUpload.name;
     } else {
-      return '';
+      return '[ 選択されていません ] ';
     }
   }
 
@@ -75,7 +82,12 @@ export class AppComponent implements AfterViewInit, DoCheck {
   }
 
   canvasClick(e) {
-    console.log('click at '+ (e.clientX - this.myCanvas.nativeElement.offsetLeft) + ','+ (e.clientY - this.myCanvas.nativeElement.offsetTop));
+    console.log('click at ' + (e.clientX - this.myCanvas.nativeElement.offsetLeft) + ','
+                + (e.clientY - this.myCanvas.nativeElement.offsetTop));
+
+    const rect = e.target.getBoundingClientRect();
+    this.x = e.clientX - rect.left;
+    this.y = e.clientY - rect.top;
   }
 
   canvasMouseUp() {

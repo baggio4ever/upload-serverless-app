@@ -1,3 +1,7 @@
 canvas {
     background: lightgrey;
 }
+
+canvas:hover {
+    background: lightblue;
+}

@@ -74,3 +74,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [AWSにおける静的コンテンツ配信パターンカタログ（アンチパターン含む）](https://dev.classmethod.jp/cloud/aws/static-contents-delivery-patterns/)
 
 [コンポーネント間のデータ授受メモ](https://qiita.com/gambare/items/b75f9c9dc997ae45c092)
+
+[HTMLファイルの中に画像を埋め込む方法](https://allabout.co.jp/gm/gc/23977/) Angular CLI scaffoldみたいな
