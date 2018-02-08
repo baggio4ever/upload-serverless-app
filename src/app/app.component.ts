@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
   rectW = 100;
   rectH = 100;
   rectColor = '#FF0000';
+  rectAngle = 0;
   isMouseDown = false;
 
   myPattern = null;
@@ -74,15 +75,21 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
     const ctx = this.context;
     if ( ctx ) {
-      // 四角形（UIから大きさ変更できるやつ）
       ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-      ctx.fillStyle = this.rectColor;
-//      ctx.fillRect( 0, 0, this.rectW, this.rectH );
-      ctx.fillRect( (CANVAS_WIDTH - this.rectW) / 2, (CANVAS_HEIGHT - this.rectH) / 2, this.rectW, this.rectH ); // センター基準
 
       // 芝生パターン
       ctx.fillStyle = this.myPattern;
       ctx.fillRect( 10, 10, CANVAS_WIDTH - 20, CANVAS_HEIGHT - 20);
+
+      // 四角形（UIから大きさ変更できるやつ）
+      ctx.save();
+      ctx.translate( CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2 );
+      ctx.rotate(this.getRadianFromDegree(this.rectAngle));
+      ctx.globalAlpha = 0.6;
+      ctx.fillStyle = this.rectColor;
+//      ctx.fillRect( 0, 0, this.rectW, this.rectH );
+      ctx.fillRect( (/*CANVAS_WIDTH*/ - this.rectW) / 2, (/*CANVAS_HEIGHT*/ - this.rectH) / 2, this.rectW, this.rectH ); // センター基準
+      ctx.restore();
 
 
       /* この辺を参考にした
@@ -119,7 +126,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
       // 二次曲線の例　吹き出し
       ctx.save();
-      ctx.translate( 20,100 );
+      ctx.translate( 20, 100 );
       ctx.strokeStyle = 'white';
       const offsetY = 0;
       ctx.beginPath();
@@ -222,6 +229,11 @@ export class AppComponent implements AfterViewInit, DoCheck {
   moveH(v): void {
 //    console.log('move: '+v);
     this.rectH = v;
+  }
+
+  moveAngle(v): void {
+//    console.log('move: '+v);
+    this.rectAngle = v;
   }
 
   handleFileInput(files: FileList): void {
