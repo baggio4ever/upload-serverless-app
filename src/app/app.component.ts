@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
   rectW = 100;
   rectH = 100;
   rectColor = '#FF0000';
+  isMouseDown = false;
 
   context: CanvasRenderingContext2D;
   animContext: CanvasRenderingContext2D;
@@ -95,21 +96,31 @@ export class AppComponent implements AfterViewInit, DoCheck {
     this.fileUploadService.postFile(this.fileToUpload);
   }
 
-  canvasClick(e) {
-    console.log('click at ' + (e.clientX - this.myCanvas.nativeElement.offsetLeft) + ','
-                + (e.clientY - this.myCanvas.nativeElement.offsetTop));
-
+  updateXY( e ) {
     const rect = e.target.getBoundingClientRect();
     this.x = e.clientX - rect.left;
     this.y = e.clientY - rect.top;
   }
 
-  canvasMouseUp() {
-    console.log('mouseUp');
+  canvasClick(e) {
+    console.log('click at ' + (e.clientX - this.myCanvas.nativeElement.offsetLeft) + ','
+                + (e.clientY - this.myCanvas.nativeElement.offsetTop));
+
+    this.updateXY(e);
+//    const rect = e.target.getBoundingClientRect();
+//    this.x = e.clientX - rect.left;
+//    this.y = e.clientY - rect.top;
   }
 
-  canvasMouseDown() {
+  canvasMouseUp(e) {
+    console.log('mouseUp');
+    this.isMouseDown = false;
+  }
+
+  canvasMouseDown(e) {
     console.log('mouseDown');
+    this.isMouseDown = true;
+    this.updateXY(e);
   }
 
   canvasMouseOver() {
@@ -120,8 +131,11 @@ export class AppComponent implements AfterViewInit, DoCheck {
     console.log('mouseOut');
   }
 
-  canvasMouseMove() {
+  canvasMouseMove(e) {
 //    console.log('mouseMove');
+    if ( this.isMouseDown ) {
+      this.updateXY(e);
+    }
   }
 
   canvasKeyDown( e ) {
@@ -142,7 +156,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
       this.animContext.beginPath();
       this.animContext.strokeRect(this.animX,0,10,10);
-      if( this.animX > this.animCanvasWidth) {
+      if ( this.animX > this.animCanvasWidth ) {
         this.animX = 0;
       } else {
         this.animX += 1;

@@ -23,11 +23,11 @@
 <div>
   <canvas #myCanvas width="400" height="400" tabindex="0"
       (click)="canvasClick($event)" 
-      (mousedown)="canvasMouseDown()" 
-      (mouseup)="canvasMouseUp()"
+      (mousedown)="canvasMouseDown($event)" 
+      (mouseup)="canvasMouseUp($event)"
       (mouseover)="canvasMouseOver()"
       (mouseout)="canvasMouseOut()"
-      (mousemove)="canvasMouseMove()"
+      (mousemove)="canvasMouseMove($event)"
       (keyup)="canvasKeyUp($event)"
       (keypress)="canvasKeyPress($event)"
       (keydown)="canvasKeyDown($event)"></canvas>
