@@ -25,13 +25,15 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
   fileToUpload: File = null;
 
-  x = 0;
-  y = 0;
+  x = 20;
+  y = 20;
 
   animCanvasWidth = 0;
   animCanvasHeight = 0;
 
   animX = 0;
+
+  ball = null;
 
   constructor( private fileUploadService: FileUploadService ) {
   }
@@ -51,6 +53,12 @@ export class AppComponent implements AfterViewInit, DoCheck {
     img.src = '../assets/images/images.jpg';
     img.onload = () => {
       this.myPattern = this.context.createPattern(img, 'repeat');
+    };
+
+    const img_ball = new Image();
+    img_ball.src = '../assets/images/football-157930_960_720.png';
+    img_ball.onload = () => {
+      this.ball = img_ball; // まわりくどいね
     };
 
     this.startAnim();
@@ -76,11 +84,6 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.fillStyle = this.myPattern;
       ctx.fillRect( 10, 10, CANVAS_WIDTH - 20, CANVAS_HEIGHT - 20);
 
-      // 四角形（マウス操作に追従する奴）
-      ctx.fillStyle = this.rectColor;
-      const W = 10;
-      const H = 10;
-      ctx.fillRect(this.x - W / 2, this.y - H / 2, W, H);
 
       /* この辺を参考にした
         https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage
@@ -164,6 +167,29 @@ export class AppComponent implements AfterViewInit, DoCheck {
       const m = ctx.measureText(t);
       ctx.fillText(t, (CANVAS_WIDTH - m.width) / 2, CANVAS_HEIGHT - 30); // センタリング
 //      ctx.strokeText('think your own strategy',30,CANVAS_HEIGHT-30);
+
+      // ball （マウス操作に追従する奴）
+      this.drawBall( ctx );
+/*
+      if ( this.ball ) {
+        ctx.drawImage(this.ball, 100, 100, 40, 40);
+      }
+
+
+      // 四角形（マウス操作に追従する奴）
+      ctx.fillStyle = this.rectColor;
+      const W = 10;
+      const H = 10;
+      ctx.fillRect(this.x - W / 2, this.y - H / 2, W, H);
+*/
+    }
+  }
+
+  drawBall(ctx): void {
+    const BALL_WIDTH = 40;
+    const BALL_HEIGHT = 40;
+    if ( this.ball ) {
+        ctx.drawImage(this.ball, this.x - BALL_WIDTH / 2, this.y - BALL_HEIGHT / 2, BALL_WIDTH, BALL_HEIGHT);
     }
   }
 

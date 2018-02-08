@@ -52,7 +52,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [CanvasRenderingContext2D](https://developer.mozilla.org/ja/docs/Web/API/CanvasRenderingContext2D)
 
-[canvas チュートリアル](https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Canvas_tutorial)
+[canvas チュートリアル](https://developer.mozilla.org/ja/docs/Web/Guide/HTML/Canvas_tutorial)　わかりよい！
 
 
 #### Swagger
