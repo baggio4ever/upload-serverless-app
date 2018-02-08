@@ -50,8 +50,8 @@ export class AppComponent implements AfterViewInit, DoCheck {
     const img = new Image();
     img.src = '../assets/images/images.jpg';
     img.onload = () => {
-      this.myPattern = this.context.createPattern(img,'repeat');
-    }
+      this.myPattern = this.context.createPattern(img, 'repeat');
+    };
 
     this.startAnim();
   }
@@ -72,8 +72,9 @@ export class AppComponent implements AfterViewInit, DoCheck {
 //      ctx.fillRect( 0, 0, this.rectW, this.rectH );
       ctx.fillRect( (CANVAS_WIDTH - this.rectW) / 2, (CANVAS_HEIGHT - this.rectH) / 2, this.rectW, this.rectH ); // センター基準
 
+      // 芝生パターン
       ctx.fillStyle = this.myPattern;
-      ctx.fillRect( 10,10,CANVAS_WIDTH-20,CANVAS_HEIGHT-20);
+      ctx.fillRect( 10, 10, CANVAS_WIDTH - 20, CANVAS_HEIGHT - 20);
 
       // 四角形（マウス操作に追従する奴）
       ctx.fillStyle = this.rectColor;
@@ -156,6 +157,13 @@ export class AppComponent implements AfterViewInit, DoCheck {
         ctx.fill();
       }
       ctx.globalAlpha = 1.0;
+
+      // text
+      ctx.font = '48px serif';
+      const t = 'think your own strategy';
+      const m = ctx.measureText(t);
+      ctx.fillText(t, (CANVAS_WIDTH - m.width) / 2, CANVAS_HEIGHT - 30); // センタリング
+//      ctx.strokeText('think your own strategy',30,CANVAS_HEIGHT-30);
     }
   }
 
