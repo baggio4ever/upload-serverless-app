@@ -102,6 +102,9 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.fill();
 
       // スマイリー
+      ctx.save();
+      ctx.translate( 200, 200 );
+      ctx.strokeStyle = 'white';
       ctx.beginPath();
       ctx.fillStyle = 'rgb(0, 0, 0)';
       ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // 外の円
@@ -112,9 +115,13 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.moveTo(95, 65);
       ctx.arc(90, 65, 5, 0, Math.PI * 2, true);  // 右目
       ctx.stroke();
+      ctx.restore();
 
       // 二次曲線の例　吹き出し
-      const offsetY = 200;
+      ctx.save();
+      ctx.translate( 20,100 );
+      ctx.strokeStyle = 'white';
+      const offsetY = 0;
       ctx.beginPath();
       ctx.moveTo(75, 25 + offsetY);
       ctx.quadraticCurveTo(25, 25 + offsetY, 25, 62.5 + offsetY);
@@ -124,9 +131,13 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.quadraticCurveTo(125, 100 + offsetY, 125, 62.5 + offsetY);
       ctx.quadraticCurveTo(125, 25 + offsetY, 75, 25 + offsetY);
       ctx.stroke();
+      ctx.restore();
 
       // 三次ベジェ曲線の例　ハート
-      const offsetX = 200;
+      ctx.save();
+      ctx.translate( 200, 0 );
+      const offsetX = 0;
+      ctx.fillStyle = 'rgba(200,10,10,0.8)';
       ctx.beginPath();
       ctx.moveTo(75 + offsetX, 40);
       ctx.bezierCurveTo(75 + offsetX, 37, 70 + offsetX, 25, 50 + offsetX, 25);
@@ -136,10 +147,13 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.bezierCurveTo(130 + offsetX, 62.5, 130 + offsetX, 25, 100 + offsetX, 25);
       ctx.bezierCurveTo(85 + offsetX, 25, 75 + offsetX, 37, 75 + offsetX, 40);
       ctx.fill();
+      ctx.restore();
 
       // 半透明サンプル globalAlpha
       // draw background
-      const offsetX2 = 400;
+      ctx.save();
+      ctx.translate( 400, 0 );
+      const offsetX2 = 0;
       ctx.fillStyle = '#FD0';
       ctx.fillRect(0 + offsetX2, 0, 75, 75);
       ctx.fillStyle = '#6C0';
@@ -159,12 +173,14 @@ export class AppComponent implements AfterViewInit, DoCheck {
         ctx.arc(75 + offsetX2, 75, 10 + 10 * i, 0, Math.PI * 2, true);
         ctx.fill();
       }
-      ctx.globalAlpha = 1.0;
+      ctx.restore();
+//      ctx.globalAlpha = 1.0;
 
       // text
       ctx.font = '48px serif';
       const t = 'think your own strategy';
       const m = ctx.measureText(t);
+      ctx.fillStyle = 'white';
       ctx.fillText(t, (CANVAS_WIDTH - m.width) / 2, CANVAS_HEIGHT - 30); // センタリング
 //      ctx.strokeText('think your own strategy',30,CANVAS_HEIGHT-30);
 
