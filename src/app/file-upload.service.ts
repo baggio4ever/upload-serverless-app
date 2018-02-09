@@ -12,9 +12,9 @@ export class FileUploadService {
     const formData: FormData = new FormData();
     formData.append('fileKey', fileToUpload, fileToUpload.name);
 
-    const header = new HttpHeaders().set('Content-Type','image/jpeg');
+    const header = new HttpHeaders().set('Content-Type', 'image/jpeg');
     this.http.post(endpoint, fileToUpload, { headers: header })
-            .subscribe( data => { console.log('data:'+data) });
+            .subscribe( data => { console.log('data:' + data); });
   }
 
   handleError(e) {

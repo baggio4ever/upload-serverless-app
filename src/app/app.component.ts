@@ -374,18 +374,6 @@ export class AppComponent implements AfterViewInit, DoCheck {
 
       // ball （マウス操作に追従する奴）
       this.drawBall( ctx );
-/*
-      if ( this.ball ) {
-        ctx.drawImage(this.ball, 100, 100, 40, 40);
-      }
-
-
-      // 四角形（マウス操作に追従する奴）
-      ctx.fillStyle = this.rectColor;
-      const W = 10;
-      const H = 10;
-      ctx.fillRect(this.x - W / 2, this.y - H / 2, W, H);
-*/
     }
   }
 
