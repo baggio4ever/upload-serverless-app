@@ -44,6 +44,8 @@ export class AppComponent implements AfterViewInit, DoCheck {
   earth = new Image();
   moon = new Image();
 
+  dataUrl = '';
+
   constructor( private fileUploadService: FileUploadService ) {
   }
 
@@ -200,7 +202,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
     ctx.translate(20, 180);
     ctx.font = '28px serif';
 //    ctx.fillStyle = 'red';
-    ctx.fillText(''+now.getHours()+':'+min+':'+sec,0,0);
+    ctx.fillText('' + now.getHours() + ':' + min + ':' + sec, 0, 0);
     ctx.restore();
 
     window.requestAnimationFrame( () => {
@@ -354,7 +356,7 @@ export class AppComponent implements AfterViewInit, DoCheck {
       ctx.globalAlpha = 0.2;
 
       // Draw semi transparent circles
-      for (let i = 0; i < 7; i++){
+      for (let i = 0; i < 7; i++) {
         ctx.beginPath();
         ctx.arc(75 + offsetX2, 75, 10 + 10 * i, 0, Math.PI * 2, true);
         ctx.fill();
@@ -498,5 +500,14 @@ export class AppComponent implements AfterViewInit, DoCheck {
         this.animX += 1;
       }
     }, 100);
+  }
+
+  saveToDataUrl(): void {
+    // 便利だね。
+    this.dataUrl = this.myCanvas.nativeElement.toDataURL('image/png');
+  }
+
+  clearDataUrl(): void {
+    this.dataUrl = '';
   }
 }

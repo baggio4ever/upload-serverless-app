@@ -40,7 +40,12 @@
     高さ <mat-slider min="1" max="400" thumbLabel="true" [(ngModel)]="rectH" (input)="moveH(slider2.value)" #slider2></mat-slider>
     角度 <mat-slider min="0" max="360" thumbLabel="true" [(ngModel)]="rectAngle" (input)="moveAngle(slider3.value)" #slider3></mat-slider><br/>
     塗りの色 <input type="color" [(ngModel)]="rectColor" placeholder="color" value="{{rectColor}}" />
+    <button mat-raised-button color="primary" (click)="saveToDataUrl()">よいしょ！toDataURL()</button>
+    <button mat-raised-button (click)="clearDataUrl()">クリア</button>
   </div>
+</div>
+<div *ngIf="dataUrl!==''">
+  <a href="{{dataUrl}}" download="sample.png">ダウンロードする？</a>
 </div>
 
 <div>
