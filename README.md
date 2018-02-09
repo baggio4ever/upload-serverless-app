@@ -110,3 +110,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 [なぜプロダクトに Vue.js を採用したのか? 運用してみてどうっだった? という話](https://blog.nagisa-inc.jp/archives/2980) Vue.jsってどうなんだろう
 
+[エンジニアなら知っておきたい、絵で見てわかるセキュア通信の基本](https://qiita.com/t_nakayama0714/items/83ac0b12ced9e7083927) いいね！多し ☆☆☆
+
+[そろそろ真面目に、HTMLで帳票を描く話をしようか](https://qiita.com/cognitom/items/d39d5f19054c8c8fd592) これもいいね！多い ☆☆☆
+
+[2018年のパスワードハッシュ](https://qiita.com/rana_kualu/items/3ef57485be1103362f56)
