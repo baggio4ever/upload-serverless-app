@@ -105,3 +105,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [HTMLファイルの中に画像を埋め込む方法](https://allabout.co.jp/gm/gc/23977/) Angular CLI scaffoldみたいな
 
 [Angular 5 / d3.js - Pie Chart](http://www.muller.tech/post/2017/11/13/angular5-d3js-pie-chart/) d3.js との連携。将来的に参考になるかな。
+
+[Docker入門（第一回）～Dockerとは何か、何が良いのか～](https://knowledge.sakura.ad.jp/13265/) Docker気になるよねぇ
+
+[なぜプロダクトに Vue.js を採用したのか? 運用してみてどうっだった? という話](https://blog.nagisa-inc.jp/archives/2980) Vue.jsってどうなんだろう
+
