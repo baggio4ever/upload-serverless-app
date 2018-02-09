@@ -84,6 +84,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [Angular-CLIとElectronの罠](https://weakenedfuntimeblog.wordpress.com/2017/07/26/angular-cli%E3%81%A8electron%E3%81%A7%E7%94%9F%E3%82%8C%E3%82%8B%E7%BD%A0/)
 
 
+#### デバッグ
+[Using Angular in VS Code](https://code.visualstudio.com/docs/nodejs/angular-tutorial) なんか便利そうなことが書いてある雰囲気 ☆☆☆
 
 #### その他
 [Serverless+SPAで超低費用な個人サービス構築のススメ](https://qiita.com/teradonburi/items/aa31fa91d618dd6955a1)
