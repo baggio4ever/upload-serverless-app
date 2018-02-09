@@ -69,6 +69,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 [多要素認証を使った運用でもっと安全に](http://blog.serverworks.co.jp/tech/2017/02/08/mfa/)
 
 
+#### Electron 連携 （いつかは）
+
+[Angular 5 Electron Tutorial](https://coursetro.com/posts/code/125/Angular-5-Electron-Tutorial)
+
+[Angular on Electron](https://qiita.com/Jialipassion/items/2d9cea3e39a2251381e0)
+
+[@angular/cliでElectron](https://qiita.com/Mamoru-Izuka/items/2542e49f9d2d889a6ce0)
+
+[Electronでアプリケーションを作ってみよう](https://qiita.com/Quramy/items/a4be32769366cfe55778)
+
+[Build Angular Desktop Apps With Electron](https://angularfirebase.com/lessons/desktop-apps-with-electron-and-angular/)
+
+[Angular-CLIとElectronの罠](https://weakenedfuntimeblog.wordpress.com/2017/07/26/angular-cli%E3%81%A8electron%E3%81%A7%E7%94%9F%E3%82%8C%E3%82%8B%E7%BD%A0/)
+
+
+
 #### その他
 [Serverless+SPAで超低費用な個人サービス構築のススメ](https://qiita.com/teradonburi/items/aa31fa91d618dd6955a1)
 
